@@ -3,11 +3,11 @@ import { Form, Input } from './styles'
 import { Btn } from "../../UI/Button";
 import PropTypes from 'prop-types'
 
-export const NewForm = ({ handleChange, handleSubmit, title, description, url}) => {
+export const NewForm = ({ handleChange, handleSubmit, title, description, url, headTitle, btnTitle}) => {
 
   return (
     <Form onSubmit={e => handleSubmit(e)}>
-      <h1 className="text-center">Nueva tarjeta</h1>
+      <h1 className="text-center">{headTitle}</h1>
       <Input
         type="text"
         placeholder="Título *"
@@ -32,7 +32,7 @@ export const NewForm = ({ handleChange, handleSubmit, title, description, url}) 
         onChange={e => handleChange(e)}
       />
       <div className="text-center">
-        <Btn onClick={e => onClose(e)}>Añadir</Btn>
+        <Btn onClick={e => onClose(e)}>{btnTitle}</Btn>
       </div>
     </Form>
   )

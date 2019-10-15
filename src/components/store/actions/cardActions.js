@@ -16,8 +16,7 @@ export const removeCard = id => {
 
 export function getCardEdit(id){
   return (dispatch) => {
-    dispatch(getCardEditAction())
-    console.log(dispatch)
+    dispatch(getCardEditAction(id))
   }
 }
 

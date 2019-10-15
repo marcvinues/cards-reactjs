@@ -54,6 +54,8 @@ class FormCard extends Component {
           url={url}
           handleChange={this.handleChange}
           onClose={this.onClose}
+          headTitle="Nueva Tarjeta"
+          btnTitle="Añadir"
         />
       </Fragment>
     )
@@ -67,56 +69,3 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(null, mapDispatchToProps)(FormCard);
-
-// export const FormCard = (props) => {
-//   console.log(props)
-//   const [ title, setTitle ] = useState('')
-//   const [ description , setDescription ] = useState('')
-//   const [ url, setUrl ] = useState('')
-
-
-//   const dispatch = useDispatch()
-//   const addNewCard = card => dispatch(addCard(card))
-
-//   function onClose(e) {
-//     props.onClose && props.onClose(e)
-//   }
-
-//   function handleChange(){
-//     console.log(title)
-//   }
-
-//   function onEdit(){
-
-//   }
-
-//   const handleSubmit = e => {
-//     e.preventDefault()
-//     onEdit()
-//     addNewCard({
-//       id: uuid(),
-//       title,
-//       description,
-//       url
-//     })
-
-//     setTitle('')
-//     setDescription('')
-//     setUrl('')
-//     onClose()
-//   }
-//   if(!props.show){
-//     return null
-//   }
-//   return (
-//     <Fragment>
-//       <NewForm 
-//         handleSubmit={handleSubmit}
-//         title={title}
-//         description={description}
-//         url={url}
-//         handleChange={handleChange}
-//       />
-//     </Fragment>
-//   )
-// }
